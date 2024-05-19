@@ -40,6 +40,7 @@ public class GerenciadorTarefaTest
     {
         //Arrange
         Tarefa tarefa = new Tarefa("Lavar louça",false);
+        gerenciadorTarefa.Tarefas.Add(tarefa);
         
         //Act
         gerenciadorTarefa.ConcluirTarefa(tarefa.Nome);
@@ -85,17 +86,23 @@ public class GerenciadorTarefaTest
         //Arrange
         Tarefa tarefaA = new Tarefa("Tarefa A",false);
         Tarefa tarefaB = new Tarefa("Tarefa B",false);
+        Tarefa tarefaC = new Tarefa("Tarefa C",false);
+        List<Tarefa> historico = new List<Tarefa>();
+
+
         gerenciadorTarefa.Tarefas.Add(tarefaA);
         gerenciadorTarefa.Tarefas.Add(tarefaB);
-        List<Tarefa> historico = new List<Tarefa>();
+        gerenciadorTarefa.Tarefas.Add(tarefaC);
+        
         historico.Add(tarefaA);
         historico.Add(tarefaB);
+        historico.Add(tarefaC);
         
         //Act
         var resultado = gerenciadorTarefa.TrazerHistoricoDuasUltimasTarefas();
 
         //Assert
-        Assert.Equal(historico,resultado.GetRange(resultado.Count - 2, 2));
+        Assert.Equal(historico.GetRange(historico.Count - 2, 2),resultado);
     }
 
 }
