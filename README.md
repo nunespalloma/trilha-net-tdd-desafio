@@ -1,6 +1,6 @@
 # Gerenciador de Tarefas
 
-Este Gerenciador de Tarefas faz parte do desafio final do Bootcamp de .NET fornecido pela DIO em parceria com a Avanade.
+Este Gerenciador de Tarefas faz parte do desafio final do Bootcamp Coding The Future Avanade - .NET Developer da DIO.
 
 O presente projeto visa utilizar a metodologia de testes TDD (Test-Driven Development) - Desenvolvimento Orientado por Testes, em que o objetivo é verificar os requisitos de um software e elaborar seus testes unitários antes de seu desenvolvimento.
 
